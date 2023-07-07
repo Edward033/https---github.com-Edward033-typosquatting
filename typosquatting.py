@@ -1,21 +1,8 @@
 ##Input: Usage: typosquatting.py -d domain -e 1-20
 ##Output: Matching domains
 
-import argparse
 import Levenshtein
 import logging 
-
-argument_parser = argparse.ArgumentParser(
-    prog='Typosquatting.py',
-    description=('Print candidate domains for typosquatting based on edit' 
-                 ' distance calculation. Reads from a csv whois database file'
-                 ' with newly registered domain names')
-)
-argument_parser.add_argument("-d", "--domain")
-argument_parser.add_argument("-e", "--edit_distance")
-argument_parser.add_argument("-w", "--whois_file", required=False)
-
-arguments = argument_parser.parse_args() 
 
 class TypoSquatting:
     def __init__(self, original_domain, edit_distance=1, 
