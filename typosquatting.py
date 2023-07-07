@@ -1,6 +1,3 @@
-##Input: Usage: typosquatting.py -d domain -e 1-20
-##Output: Matching domains
-
 import Levenshtein
 import logging 
 
