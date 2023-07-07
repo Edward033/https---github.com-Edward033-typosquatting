@@ -43,10 +43,3 @@ class TypoSquatting:
             for domain_name in self.get_domain_name_from_file(line):
                 if self.is_similar(self.original_domain, domain_name):
                     yield domain_name
-
-typosquatting = TypoSquatting(original_domain = arguments.domain, 
-    edit_distance=arguments.edit_distance,
-)
-
-for domain in typosquatting.get_similar_domain_names_from_whois_databasefile():
-    print(domain)
