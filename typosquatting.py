@@ -6,7 +6,7 @@ import logging
 
 class TypoSquatting:
     def __init__(self, original_domain, edit_distance=1, 
-        whois_csv_file = 'whois_csv_files/sample_whois_rile.csv'):
+        whois_csv_file = 'whois_csv_files/sample_whois_file.csv'):
 
         self.original_domain = original_domain
         self.edit_distance = edit_distance 
